@@ -1,0 +1,71 @@
+<html>
+<title>Pneumonia_Detection_Application</title>
+<!-- stylesheets -->
+<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
+<head>
+<style>
+.borderexample0
+{
+border-style:solid;
+border-color:red;
+padding:0.15em;
+}
+.borderexample1
+{
+border-style:solid;
+border-color:green;
+padding:0.15em;
+}
+.borderexample6
+{
+	border-style:solid;
+	border-color:black;
+	padding:0.35em;
+}
+form 
+{
+    width: 400px;
+    margin: 10 auto;
+	align: center;
+}
+</style>
+</head>
+<body class ="borderexample6" style="background-color:beige;">
+<div class="row">
+  <div class="col-md-11">
+    <h1 align="center"><b><span style="color:black">Gurukula Kangri Vishwavidyalaya,Haridwar</span></b></h1>
+	<h2 align="center"><b><U>Minor Project</b></U></h1>
+	<h2 align="center"><b><U>on</b></U></h2>
+    <h2 align="center"><b><U>Pneumonia Detection</b></U></h2>
+	<h2 align="center"><U></U></h2>
+	<h4 align="center">Upload a X-ray image</h4>
+    <br>
+    <form action="" method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+
+    <h2>Results</h2>
+    <br>
+    <table class="table" id="results-table">
+        <tr>
+          <th>Image</th>
+          <th>Prediction</th>
+        </tr>
+		<tr>
+          {% block content %}{% endblock %}
+        </tr>
+    </table>
+  </div>
+</div>
+<h2 class="borderexample0" align="center"><span style="color:red">Class 0 = Pneumonia</span></h2>
+<h2 class="borderexample1" align="center"><span style="color:green">Class 1 = Normal</span></h2>
+
+<h3 align="right"><b>project made by:  </b>Nitish Gangwar(166301057)</h3>
+<h3 align="right">Gaurav Rai(166301027)</h3>
+<h3 align="right">Ashish Yadav(166301014)</h3>
+
+
+</body>
+</html>
