@@ -5,7 +5,7 @@ h5py==2.7.0
 Keras==2.2.4
 Keras-Preprocessing==1.0.5
 Keras-Applications==1.0.6
-numpy==1.15.4
+numpy==1.22.0
 pandas==0.20.3
 requests==2.18.4
 scikit-image==0.13.0
